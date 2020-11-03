@@ -3,10 +3,6 @@
 fun catstrings [] = ""
   | catstrings (a::rest) = a ^ catstrings rest;
 
-(*CITE: Lucas Barusek
-DESC: Understand and realize how can the predicate function help in finding
-      duplicates in a list. *)
-
 (*remov = fn 'a ('a * 'b -> bool) -> 'b list -> 'b list
 remov take a wanted-to-remove item, a comparing predicate, and a list, then
 it remove all the items in the list that are applied to the predicate and
@@ -63,9 +59,8 @@ fun places (item, _, []) = [[item]]
 fun allplaces item [] = [[item]]
   | allplaces item lst = rev (places (item, length lst, lst));
 
-(*CITE: Lucas Barusek
-DESC: How to use the functions allplaces to create perms
-      rather than create more complicated functions to accomodate perms.*)
+(*We can use the functions allplaces creates perms rather than to create more 
+complicated functions to accomodate perms.*)
 
 (*perms = fn 'a list -> 'a list list*)
 (*Produce all permutations of the parameter: create a nested of permutations
@@ -377,9 +372,8 @@ fun big_mul_helper (BIG "0", BIG "0") = BIG "0"     (*0 * 0 = 0*)
     itself)*)
     in add (BIG bint1, big_mul_helper (BIG bint1, sub (BIG bint2, one))) end;
 
-(*CITE: Lucase Barusek
-DESC: The idea of splitting integer when multiply:
-      316 * 152 = 316 * 100 + 316 * 50 + 316 * 2*)
+(*Splitting integer when multiply:
+  316 * 152 = (316 * 100) + (316 * 50) + (316 * 2)*)
 
 (*mul = fn : bigint * bigint -> bigint*)
 (*multiply function that allow bigint arithmetic (left to right)*)
