@@ -1,7 +1,6 @@
 # SML_problems
-An introduction to Standard ML
 
-We are going to implement some functions in standard ML: <br />
+The project will implement some functions in standard ML: <br />
 1. catstrings = fn string list -> string <br />
 Concatenate all the strings in the string list.
 
