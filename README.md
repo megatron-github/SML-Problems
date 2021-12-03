@@ -1,4 +1,4 @@
-# SML_problems
+# SML-Problems
 
 The project will implement some functions in standard ML: <br />
 1. catstrings = fn string list -> string <br />
